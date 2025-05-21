@@ -26,6 +26,7 @@ a {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background: #1f242d; /* Add background to navbar to prevent content peek-through */
 }
 
 .navbar .logo {
@@ -35,23 +36,69 @@ a {
 
 .navbar ul {
     display: flex;
+    /* Hide by default on small screens */
+    flex-direction: column; /* Stack items vertically on mobile */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background: #1f242d; /* Same background as navbar */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.3s ease-in-out; /* Smooth transition for opening/closing */
+}
+
+.navbar ul.active {
+    max-height: 300px; /* Adjust as needed to fit all menu items when active */
 }
 
 .navbar ul li {
     list-style: none;
-    margin-left: 35px;
+    margin: 0; /* Reset margin for stacked items */
+    text-align: center;
+    padding: 15px 0; /* Add padding for better spacing */
 }
 
 .navbar ul li a {
     font-size: 20px;
     font-weight: 500;
     transition: .5s;
+    display: block; /* Make links full width for easier tapping */
 }
 
 .navbar ul li a:hover,
 .navbar ul li.active a {
     color: #7cf07c;
 }
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px; /* Space between bars */
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 
 .home {
     display: flex;
@@ -207,21 +254,27 @@ a {
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row; /* Keep logo and hamburger on one row */
         padding: 15px 5%;
     }
     .navbar .logo {
         font-size: 24px;
     }
+    /* Show hamburger menu */
+    .hamburger {
+        display: flex;
+    }
+    /* Hide default menu */
     .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding-top: 10px;
+        display: none; /* Hidden by default */
+        /* Overridden by JS for mobile menu */
     }
-    .navbar ul li {
-        margin-left: 0;
+
+    /* When the mobile menu is active, display the list */
+    .navbar ul.show-mobile-menu {
+        display: flex;
     }
+
     .home-info h1 {
         font-size: 36px;
     }
@@ -387,4 +440,3 @@ a {
     color: #1f242d;
     box-shadow: 0 0 10px #7cf07c;
 }
-
