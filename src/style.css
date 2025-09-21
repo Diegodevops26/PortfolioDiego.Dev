@@ -252,11 +252,15 @@ a {
     }
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: row; /* Keep logo and hamburger on one row */
-        padding: 15px 5%;
+@media (min-width: 769px) {
+    .navbar ul {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        max-height: none;
     }
+}
+
     .navbar .logo {
         font-size: 24px;
     }
@@ -440,3 +444,4 @@ a {
     color: #1f242d;
     box-shadow: 0 0 10px #7cf07c;
 }
+
