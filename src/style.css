@@ -213,3 +213,208 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+.home-img .img-box .img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ================= SEÇÕES ================= */
+.sobre,
+.portfolio,
+.servicos,
+.contato {
+    text-align: center;
+    padding: 80px 9%;
+    color: #fff;
+}
+
+.sobre p {
+    font-size: 18px;
+    margin-top: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-grid,
+.servicos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.projeto,
+.servico {
+    background: #2c313a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px #7cf07c;
+}
+
+.projeto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.servico i {
+    font-size: 40px;
+    color: #7cf07c;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contato input,
+.contato textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+.contato textarea {
+    height: 100px;
+}
+.contato button {
+    background: #7cf07c;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.contato button:hover {
+    background: transparent;
+    border: 2px solid #7cf07c;
+    color: #7cf07c;
+}
+
+/* Efeito de aparecer ao rolar */
+.section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.github-btn {
+    background: transparent;
+    border: 2px solid #7cf07c;
+    color: #7cf07c;
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.4s;
+}
+.github-btn:hover {
+    background: #7cf07c;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf07c;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1024px) {
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .home-info {
+        max-width: 80%;
+    }
+    .home-img {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+    .navbar .logo {
+        font-size: 24px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+    .navbar ul.show-mobile-menu {
+        display: flex;
+    }
+
+    .home-info h1 { font-size: 36px; }
+    .home-info h2 { font-size: 24px; }
+    .home-info p { font-size: 14px; }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        border-radius: 30px;
+    }
+    .home-img .img-box {
+        width: 200px;
+        height: 200px;
+    }
+    .home-img .img-box::before {
+        width: 120%;
+        height: 120%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar { padding: 10px 5%; }
+    .navbar .logo { font-size: 20px; }
+    .navbar ul li a { font-size: 16px; }
+
+    .home-info h1 { font-size: 30px; }
+    .home-info h2 { font-size: 20px; }
+    .home-info p { font-size: 12px; }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+    .home-img .img-box {
+        width: 150px;
+        height: 150px;
+    }
+    .home-img .img-box::before {
+        width: 130%;
+        height: 130%;
+    }
+}
+
+/* Desktop fixo */
+@media (min-width: 769px) {
+    .navbar ul {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        max-height: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navbar ul li {
+        padding: 0 15px;
+    }
+}
