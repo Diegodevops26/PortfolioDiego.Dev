@@ -1,11 +1,9 @@
-import React, { useState } from "react"; // Import useState hook
+import React, { useState } from "react";
 import "../style.css";
 
 const Navbar = () => {
-    // State to manage the mobile menu's open/closed status
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Function to toggle the menu state
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -14,18 +12,19 @@ const Navbar = () => {
         <nav className="navbar">
             <a href="#" className="logo">Diego.Dev</a>
 
-            {/* Hamburger menu icon */}
+            {/* Ícone do menu hambúrguer */}
             <div
-                className={`hamburger ${isMenuOpen ? 'active' : ''}`} // Add 'active' class when menu is open
+                className={`hamburger ${isMenuOpen ? "active" : ""}`}
                 id="hamburger-menu"
-                onClick={toggleMenu} // Attach click handler
+                onClick={toggleMenu}
             >
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
 
-            <ul className={isMenuOpen ? 'show-mobile-menu' : ''}> {/* Add 'show-mobile-menu' class when open */}
+            {/* Menu de navegação */}
+            <ul className={isMenuOpen ? "show-mobile-menu" : ""}>
                 <li className="active"><a href="#home" onClick={toggleMenu}>Home</a></li>
                 <li><a href="#sobre" onClick={toggleMenu}>Sobre</a></li>
                 <li><a href="#portfolio" onClick={toggleMenu}>Portfolio</a></li>
