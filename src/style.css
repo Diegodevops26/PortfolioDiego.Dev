@@ -153,6 +153,14 @@ a {
     animation-delay: 1s;
 }
 
+/* Container do botão + ícones */
+.home-info .btn-sci {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 20px; /* Espaçamento entre botão e ícones */
+    flex-wrap: wrap; /* Garante que em telas pequenas os ícones fiquem abaixo do botão */
+}
+
 /* Botão Download CV */
 .home-info .btn-sci .btn {
     display: inline-block;
@@ -172,29 +180,28 @@ a {
 }
 
 .home-info .btn-sci .btn:hover {
-    background: transparent;
-    color: #7cf07c;
-    box-shadow: none;
+    background: #7cf07c;
+    color: #1f242d;
+    box-shadow: 0 0 10px #7cf07c;
 }
 
 /* Ícones sociais */
 .home-info .btn-sci .sci {
-    margin-left: 20px;
     display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os ícones */
 }
 
 .home-info .btn-sci .sci a {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px;
     border: 2px solid #7cf07c;
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 20px;
     color: #7cf07c;
-    margin: 0 8px;
-    transition: .5s;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fade-slide 1.2s ease forwards;
+    transition: 0.3s;
 }
 
 .home-info .btn-sci .sci a:nth-child(1) { animation-delay: 1.7s; }
@@ -498,3 +505,4 @@ a {
         padding: 0 15px;
     }
 }
+
