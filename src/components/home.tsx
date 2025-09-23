@@ -8,8 +8,13 @@ const Home = () => {
             <div className="home-info">
                 <h1>Diego Santos</h1>
                 <h2>Frontend Developer</h2>
-                <p>Olá! 👋 Sou Diego Santos, estudante do 6º semestre de Análise e Desenvolvimento de Sistemas no IFNMG.
-                    🚀 Apaixonado por tecnologia...</p>
+               <p>
+             Olá! 👋 Sou Diego Santos, desenvolvedor Frontend e recém-formado em Análise e Desenvolvimento de Sistemas pelo IFNMG.  
+            🚀 Atualmente estou participando do Hackathon Big Data, sempre em busca de novos desafios e oportunidades de aprendizado.  
+            🎓 Pretendo dar continuidade aos meus estudos com uma pós-graduação em Arquitetura de Software e Sistemas Distribuídos na PUC Minas.  
+            💡 Tenho paixão por tecnologia, inovação e desenvolvimento de soluções que gerem impacto positivo.
+              </p>
+
                 <div className="btn-sci">
                     <a href="https://drive.google.com/file/d/1Y4mzNiebI169DR34hh9YUoonzExcVvqN/view?usp=sharing" className="btn">Download CV</a>
                     <div className="sci">
@@ -32,3 +37,4 @@ const Home = () => {
 };
 
 export default Home;
+
