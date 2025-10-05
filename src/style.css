@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -116,7 +117,6 @@ a {
     max-width: 50%;
 }
 
-/* Nome - Diego Santos com gradiente animado e efeito de brilho */
 .home-info h1 {
     font-size: 55px;
     background: linear-gradient(90deg, #7cf07c, #00d4ff, #7cf07c);
@@ -133,7 +133,6 @@ a {
     cursor: pointer;
 }
 
-/* Subtítulo - Frontend Developer */
 .home-info h2 {
     font-size: 32px;
     margin-top: -10px;
@@ -143,7 +142,6 @@ a {
     animation-delay: 0.5s;
 }
 
-/* Parágrafo de apresentação */
 .home-info p {
     font-size: 16px;
     margin: 10px 0 25px;
@@ -153,15 +151,13 @@ a {
     animation-delay: 1s;
 }
 
-/* Container do botão + ícones */
 .home-info .btn-sci {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
-    gap: 20px; /* Espaçamento entre botão e ícones */
-    flex-wrap: wrap; /* Garante que em telas pequenas os ícones fiquem abaixo do botão */
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Botão Download CV */
 .home-info .btn-sci .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -185,11 +181,10 @@ a {
     box-shadow: 0 0 10px #7cf07c;
 }
 
-/* Ícones sociais */
 .home-info .btn-sci .sci {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaçamento entre os ícones */
+    gap: 10px;
 }
 
 .home-info .btn-sci .sci a {
@@ -215,7 +210,6 @@ a {
     box-shadow: 0 0 10px #7cf07c;
 }
 
-/* Imagem com borda animada */
 .home-img {
     position: relative;
     display: flex;
@@ -305,13 +299,124 @@ a {
 
 /* ================= SEÇÕES ================= */
 .sobre,
-.portfolio,
 .servicos,
 .contato {
     text-align: center;
     padding: 80px 9%;
     color: #fff;
 }
+
+/* ESTILOS ANTIGOS DO PORTFOLIO FORAM REMOVIDOS E SUBSTITUÍDOS ABAIXO */
+
+/* --- NOVOS ESTILOS PARA A SEÇÃO PORTFÓLIO --- */
+.portfolio {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #1f242d; /* Mantendo o fundo escuro do seu tema */
+    color: #fff;
+}
+
+.portfolio-header {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.portfolio-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.portfolio-header p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #2c313a; /* Cor de fundo escura para os cards */
+    border: 1px solid #3c414a; /* Borda sutil */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #7cf07c; /* Efeito de brilho verde no hover */
+}
+
+.project-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.btn-github {
+    display: inline-block;
+    background: transparent;
+    color: #7cf07c;
+    border: 2px solid #7cf07c;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-github:hover {
+    background-color: #7cf07c;
+    color: #1f242d;
+    box-shadow: 0 0 15px #7cf07c;
+}
+/* --- FIM DOS NOVOS ESTILOS DO PORTFÓLIO --- */
+
 
 .sobre p {
     font-size: 18px;
@@ -321,7 +426,6 @@ a {
     margin-right: auto;
 }
 
-.portfolio-grid,
 .servicos-grid {
     display: flex;
     justify-content: center;
@@ -329,7 +433,6 @@ a {
     flex-wrap: wrap;
 }
 
-.projeto,
 .servico {
     background: #2c313a;
     padding: 20px;
@@ -337,11 +440,6 @@ a {
     width: 300px;
     text-align: center;
     box-shadow: 0 0 10px #7cf07c;
-}
-
-.projeto img {
-    width: 100%;
-    border-radius: 10px;
 }
 
 .servico i {
@@ -363,6 +461,8 @@ a {
     width: 100%;
     border-radius: 5px;
     border: none;
+    background: #2c313a;
+    color: #fff;
 }
 
 .contato textarea {
@@ -376,6 +476,8 @@ a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    color: #1f242d;
+    font-weight: 600;
 }
 
 .contato button:hover {
@@ -394,23 +496,6 @@ a {
 .section.show {
     opacity: 1;
     transform: translateY(0);
-}
-
-.github-btn {
-    background: transparent;
-    border: 2px solid #7cf07c;
-    color: #7cf07c;
-    padding: 8px 20px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 10px;
-    transition: 0.4s;
-}
-
-.github-btn:hover {
-    background: #7cf07c;
-    color: #1f242d;
-    box-shadow: 0 0 10px #7cf07c;
 }
 
 /* ================= RESPONSIVIDADE ================= */
@@ -505,4 +590,3 @@ a {
         padding: 0 15px;
     }
 }
-
