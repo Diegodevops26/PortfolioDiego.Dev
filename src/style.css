@@ -135,15 +135,12 @@ a {
 .home-info h2 {
     font-size: 32px;
     margin-top: -10px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fade-slide 1.2s ease forwards;
-    animation-delay: 0.5s;
+    /* Animações originais são controladas pelo fade-slide, mas o conteúdo é dinâmico via JS */
 }
 
 .home-info p {
     font-size: 16px;
-    margin: 10px 0 25px;
+    margin: 20px 0 25px; /* Aumentei a margem superior para acomodar melhor o h2 dinâmico */
     opacity: 0;
     transform: translateY(30px);
     animation: fade-slide 1.2s ease forwards;
@@ -158,7 +155,9 @@ a {
 }
 
 .home-info .btn-sci .btn {
-    display: inline-block;
+    display: inline-flex; /* Usando inline-flex para alinhar o ícone */
+    align-items: center;
+    gap: 8px; /* Espaço entre o texto e o ícone */
     padding: 10px 30px;
     background: #7cf07c;
     border: 2px solid #7cf07c;
@@ -244,11 +243,6 @@ a {
     animation: spin 4s linear infinite;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 .home-img .img-box .img-item {
     position: relative;
     width: 90%;
@@ -268,7 +262,19 @@ a {
     border-radius: 50%;
 }
 
+/* Efeito do cursor piscando para o título dinâmico */
+.blinking-cursor {
+    font-weight: 400;
+    color: #7cf07c; /* Cor do cursor */
+    animation: blink 0.7s infinite;
+}
+
 /* ================= ANIMAÇÕES ================= */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 @keyframes gradient-move {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -294,6 +300,11 @@ a {
     100% {
         background-position: 0 0;
     }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 /* ================= SEÇÕES ================= */
@@ -755,4 +766,5 @@ a {
         padding: 0 15px;
     }
 }
+
 
