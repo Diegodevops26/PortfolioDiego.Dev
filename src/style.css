@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -299,20 +298,25 @@ a {
 
 /* ================= SEÇÕES ================= */
 .sobre,
-.servicos,
 .contato {
     text-align: center;
     padding: 80px 9%;
     color: #fff;
 }
 
-/* ESTILOS ANTIGOS DO PORTFOLIO FORAM REMOVIDOS E SUBSTITUÍDOS ABAIXO */
+.sobre p {
+    font-size: 18px;
+    margin-top: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/* --- NOVOS ESTILOS PARA A SEÇÃO PORTFÓLIO --- */
+/* --- ESTILOS PARA A SEÇÃO PORTFÓLIO --- */
 .portfolio {
     padding: 80px 20px;
     text-align: center;
-    background-color: #1f242d; /* Mantendo o fundo escuro do seu tema */
+    background-color: #1f242d;
     color: #fff;
 }
 
@@ -342,8 +346,8 @@ a {
 }
 
 .project-card {
-    background-color: #2c313a; /* Cor de fundo escura para os cards */
-    border: 1px solid #3c414a; /* Borda sutil */
+    background-color: #2c313a;
+    border: 1px solid #3c414a;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -355,7 +359,7 @@ a {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #7cf07c; /* Efeito de brilho verde no hover */
+    box-shadow: 0 0 20px #7cf07c;
 }
 
 .project-image-container {
@@ -415,38 +419,74 @@ a {
     color: #1f242d;
     box-shadow: 0 0 15px #7cf07c;
 }
-/* --- FIM DOS NOVOS ESTILOS DO PORTFÓLIO --- */
 
+/* --- ESTILOS PARA A SEÇÃO DE SERVIÇOS --- */
+.servicos {
+    padding: 80px 9%;
+    background-color: #232831;
+    text-align: center;
+    color: #fff;
+}
 
-.sobre p {
-    font-size: 18px;
-    margin-top: 15px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+.service-header {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.service-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.service-header p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
 }
 
 .servicos-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.servico {
+.service-card {
     background: #2c313a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 0 10px #7cf07c;
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.servico i {
-    font-size: 40px;
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: #323842;
+    border-color: #7cf07c;
+}
+
+.service-icon {
+    font-size: 4rem;
     color: #7cf07c;
+    margin-bottom: 20px;
+    display: block;
 }
 
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* --- ESTILOS PARA A SEÇÃO DE CONTATO --- */
 .contato form {
     display: flex;
     flex-direction: column;
